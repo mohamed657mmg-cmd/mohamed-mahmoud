@@ -4,24 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>محمد محمود | مطور ومصمم</title>
+  <title>محمد محمود | Developer & Designer</title>
 
-  <meta name="description" content="محمد محمود - مطور مواقع وتطبيقات ومصمم مشاريع رقمية.">
+  <meta name="description" content="محمد محمود — مطور مواقع ومشاريع رقمية. أُحوّل الأفكار إلى تجارب رقمية عصرية.">
+
+  <!-- WhatsApp / Social Preview -->
+  <meta property="og:title" content="محمد محمود | Developer & Designer">
+  <meta property="og:description" content="موقعي الشخصي — تطوير مواقع، تصميم ومشاريع رقمية.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mohamed657mmg-cmd.github.io/mohamed-mahmoud/">
+  <meta property="og:image" content="https://mohamed657mmg-cmd.github.io/mohamed-mahmoud/preview.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="محمد محمود | Developer & Designer">
+  <meta name="twitter:description" content="موقعي الشخصي — تطوير مواقع وتصميم ومشاريع رقمية.">
+  <meta name="twitter:image" content="https://mohamed657mmg-cmd.github.io/mohamed-mahmoud/preview.jpg">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Tahoma, sans-serif;
       scroll-behavior: smooth;
+      font-family: Arial, Tahoma, sans-serif;
+    }
+
+    :root {
+      --bg: #06080d;
+      --card: #0c1119;
+      --card2: #101722;
+      --text: #ffffff;
+      --muted: #8c97a8;
+      --line: #1b2634;
+      --cyan: #00e5ff;
+      --green: #25d366;
     }
 
     body {
       background:
-        radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.09), transparent 30%),
-        #070a10;
-      color: #fff;
+        radial-gradient(circle at 50% -10%, rgba(0,229,255,.12), transparent 35%),
+        var(--bg);
+      color: var(--text);
       overflow-x: hidden;
     }
 
@@ -31,7 +54,7 @@
     }
 
     .container {
-      width: 90%;
+      width: 91%;
       max-width: 1150px;
       margin: auto;
     }
@@ -39,41 +62,51 @@
     /* HEADER */
 
     header {
-      height: 80px;
+      height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,.05);
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 900;
       letter-spacing: 1px;
     }
 
     .logo span {
-      color: #00e5ff;
+      color: var(--cyan);
     }
 
-    .header-btn {
-      padding: 10px 18px;
-      border: 1px solid rgba(0,229,255,.3);
-      border-radius: 30px;
-      color: #00e5ff;
+    .nav {
+      display: flex;
+      gap: 22px;
+      color: #9ca6b5;
       font-size: 14px;
-      transition: .3s;
     }
 
-    .header-btn:hover {
-      background: #00e5ff;
-      color: #061018;
+    .nav a {
+      transition: .25s;
+    }
+
+    .nav a:hover {
+      color: var(--cyan);
+    }
+
+    .top-btn {
+      background: rgba(0,229,255,.08);
+      border: 1px solid rgba(0,229,255,.25);
+      color: var(--cyan);
+      padding: 10px 17px;
+      border-radius: 30px;
+      font-size: 13px;
     }
 
     /* HERO */
 
     .hero {
-      min-height: 650px;
+      min-height: 680px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,73 +114,126 @@
       position: relative;
     }
 
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: var(--cyan);
+      opacity: .07;
+      filter: blur(120px);
+      border-radius: 50%;
+    }
+
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .badge {
       display: inline-block;
-      padding: 9px 18px;
+      padding: 9px 17px;
       border-radius: 30px;
-      background: rgba(0,229,255,.07);
+      color: var(--cyan);
       border: 1px solid rgba(0,229,255,.25);
-      color: #00e5ff;
-      margin-bottom: 25px;
-      font-size: 14px;
+      background: rgba(0,229,255,.06);
+      font-size: 13px;
+      margin-bottom: 24px;
     }
 
     .hero h1 {
-      font-size: clamp(48px, 10vw, 90px);
+      font-size: clamp(50px, 11vw, 95px);
+      line-height: 1;
       font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .hero h1 span {
-      color: #00e5ff;
+      color: var(--cyan);
+    }
+
+    .hero h2 {
+      font-size: 23px;
+      margin-bottom: 17px;
+      color: #dce2ea;
     }
 
     .hero p {
-      color: #929baa;
-      font-size: 19px;
-      line-height: 1.9;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.9;
     }
 
-    .hero-buttons {
-      margin-top: 35px;
+    .buttons {
       display: flex;
-      gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
     }
 
     .btn {
-      padding: 15px 25px;
+      padding: 15px 23px;
       border-radius: 13px;
       font-weight: bold;
       transition: .3s;
       display: inline-flex;
-      align-items: center;
       gap: 8px;
-    }
-
-    .whatsapp {
-      background: #25D366;
-      color: #061009;
-    }
-
-    .projects-btn {
-      background: #00e5ff;
-      color: #061018;
+      align-items: center;
     }
 
     .btn:hover {
       transform: translateY(-5px);
-      filter: brightness(1.08);
+    }
+
+    .cyan-btn {
+      background: var(--cyan);
+      color: #061016;
+    }
+
+    .green-btn {
+      background: var(--green);
+      color: #061009;
+    }
+
+    .dark-btn {
+      border: 1px solid var(--line);
+      background: #0b1018;
+      color: #fff;
+    }
+
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: -30px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .stat {
+      background: rgba(12,17,25,.9);
+      border: 1px solid var(--line);
+      padding: 25px 15px;
+      text-align: center;
+      border-radius: 17px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 29px;
+      color: var(--cyan);
+      margin-bottom: 7px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
     }
 
     /* SECTIONS */
@@ -161,94 +247,87 @@
       margin-bottom: 45px;
     }
 
-    .section-head .small {
-      color: #00e5ff;
-      font-size: 14px;
-      margin-bottom: 12px;
-      display: block;
+    .section-head small {
+      color: var(--cyan);
+      font-weight: bold;
+      letter-spacing: 2px;
     }
 
     .section-head h2 {
       font-size: 38px;
-      margin-bottom: 12px;
+      margin: 12px 0;
     }
 
     .section-head p {
-      color: #7f8999;
+      color: var(--muted);
       line-height: 1.8;
     }
 
     /* ABOUT */
 
-    .about-card {
-      background: linear-gradient(
-        145deg,
-        rgba(15,21,31,.95),
-        rgba(9,13,20,.95)
-      );
-      border: 1px solid #1b2634;
-      border-radius: 25px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 20px 70px rgba(0,0,0,.25);
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
     }
 
-    .about-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 38px;
-      background: rgba(0,229,255,.08);
-      border: 1px solid rgba(0,229,255,.2);
+    .about-card {
+      background: linear-gradient(145deg, #0e151f, #0a0f17);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 35px;
     }
 
     .about-card h3 {
-      font-size: 27px;
-      margin-bottom: 15px;
+      font-size: 25px;
+      margin-bottom: 17px;
     }
 
     .about-card p {
-      color: #929baa;
+      color: var(--muted);
       line-height: 2;
-      max-width: 750px;
-      margin: auto;
-      font-size: 17px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 22px;
+    }
+
+    .about-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      color: #c6ced9;
     }
 
     /* PROJECTS */
 
-    .projects-grid {
+    .projects {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .project {
-      background: #0c1119;
-      border: 1px solid #1a2532;
-      border-radius: 20px;
       overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
       transition: .35s;
     }
 
     .project:hover {
       transform: translateY(-8px);
       border-color: rgba(0,229,255,.5);
-      box-shadow: 0 20px 50px rgba(0,0,0,.35);
     }
 
-    .project-image {
-      height: 210px;
+    .project-img {
+      height: 205px;
       overflow: hidden;
       position: relative;
       background: #111722;
     }
 
-    .project-image img {
+    .project-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -256,67 +335,40 @@
     }
 
     .project:hover img {
-      transform: scale(1.07);
+      transform: scale(1.08);
     }
 
-    .project-tag {
+    .tag {
       position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(0,0,0,.7);
-      backdrop-filter: blur(10px);
+      right: 13px;
+      top: 13px;
+      background: rgba(0,0,0,.72);
       padding: 7px 11px;
       border-radius: 20px;
-      font-size: 12px;
-      color: #00e5ff;
+      color: var(--cyan);
+      font-size: 11px;
     }
 
-    .project-info {
-      padding: 24px;
+    .project-body {
+      padding: 23px;
     }
 
-    .project-info h3 {
-      font-size: 22px;
+    .project-body h3 {
+      font-size: 21px;
       margin-bottom: 10px;
     }
 
-    .project-info p {
-      color: #828c9c;
-      line-height: 1.8;
+    .project-body p {
+      color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
       min-height: 75px;
     }
 
-    .project-link {
-      display: inline-block;
-      margin-top: 18px;
-      color: #00e5ff;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    /* SKILLS */
-
-    .skills {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .skill {
-      padding: 14px 21px;
-      background: #0c1119;
-      border: 1px solid #1b2634;
-      border-radius: 12px;
-      color: #d8dee7;
-      transition: .3s;
-    }
-
-    .skill:hover {
-      border-color: #00e5ff;
-      color: #00e5ff;
-      transform: translateY(-4px);
+    .project-status {
+      margin-top: 17px;
+      color: #6fdcff;
+      font-size: 12px;
     }
 
     /* SERVICES */
@@ -328,10 +380,10 @@
     }
 
     .service {
-      background: #0c1119;
-      border: 1px solid #1a2532;
-      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--line);
       padding: 30px;
+      border-radius: 20px;
       text-align: center;
       transition: .3s;
     }
@@ -342,146 +394,171 @@
     }
 
     .service-icon {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 18px;
     }
 
     .service h3 {
       margin-bottom: 12px;
-      font-size: 20px;
     }
 
     .service p {
-      color: #7f8998;
+      color: var(--muted);
       line-height: 1.8;
       font-size: 14px;
     }
 
-    /* CONTACT */
+    /* SKILLS */
 
-    .contact-box {
-      background:
-        radial-gradient(circle at center, rgba(0,229,255,.08), transparent 60%),
-        #0c1119;
-      border: 1px solid #1b2634;
-      border-radius: 28px;
-      padding: 65px 25px;
-      text-align: center;
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
-    .contact-box h2 {
+    .skill {
+      padding: 13px 19px;
+      border-radius: 11px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: #d4dbe5;
+      transition: .3s;
+    }
+
+    .skill:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      padding: 70px 25px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at center, rgba(0,229,255,.09), transparent 60%),
+        #0c1119;
+    }
+
+    .contact h2 {
       font-size: 40px;
       margin-bottom: 15px;
     }
 
-    .contact-box p {
-      color: #8c96a5;
-      margin-bottom: 30px;
+    .contact p {
+      color: var(--muted);
       line-height: 1.8;
+      margin-bottom: 28px;
     }
 
-    .whatsapp-big {
-      display: inline-flex;
-      background: #25D366;
+    /* FLOATING WHATSAPP */
+
+    .floating-whatsapp {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--green);
       color: #061009;
-      padding: 17px 30px;
-      border-radius: 14px;
-      font-weight: 900;
-      font-size: 17px;
-      transition: .3s;
+      display: flex;
       align-items: center;
-      gap: 10px;
-    }
-
-    .whatsapp-big:hover {
-      transform: translateY(-5px) scale(1.02);
+      justify-content: center;
+      font-size: 27px;
+      box-shadow: 0 8px 30px rgba(37,211,102,.25);
+      z-index: 100;
     }
 
     /* FOOTER */
 
     footer {
-      border-top: 1px solid #151d27;
       padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,.05);
       text-align: center;
-      color: #626d7c;
-      line-height: 1.8;
+      color: #657080;
+      line-height: 1.9;
     }
 
     footer strong {
-      color: #00e5ff;
+      color: var(--cyan);
     }
 
     /* MOBILE */
 
-    @media (max-width: 850px) {
+    @media(max-width:850px) {
+      .nav {
+        display: none;
+      }
 
-      .projects-grid,
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects,
       .services {
         grid-template-columns: 1fr 1fr;
       }
 
+      .about {
+        grid-template-columns: 1fr;
+      }
     }
 
-    @media (max-width: 600px) {
-
+    @media(max-width:600px) {
       .container {
         width: 92%;
       }
 
-      header {
-        height: 70px;
-      }
-
-      .header-btn {
-        font-size: 12px;
-        padding: 9px 13px;
-      }
-
-      .logo {
-        font-size: 20px;
-      }
-
       .hero {
-        min-height: 580px;
+        min-height: 590px;
       }
 
       .hero h1 {
-        font-size: 52px;
+        font-size: 55px;
+      }
+
+      .hero h2 {
+        font-size: 19px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       section {
         padding: 65px 0;
       }
 
-      .section-head h2 {
-        font-size: 30px;
+      .stats {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .projects-grid,
+      .projects,
       .services {
         grid-template-columns: 1fr;
       }
 
-      .about-card {
-        padding: 30px 20px;
-      }
-
-      .contact-box {
-        padding: 50px 20px;
-      }
-
-      .contact-box h2 {
+      .section-head h2 {
         font-size: 30px;
       }
 
-      .project-image {
-        height: 200px;
+      .contact {
+        padding: 50px 20px;
       }
 
+      .contact h2 {
+        font-size: 30px;
+      }
+
+      .top-btn {
+        font-size: 11px;
+        padding: 9px 12px;
+      }
     }
   </style>
 </head>
@@ -498,10 +575,17 @@
         MOHAMED<span>.</span>
       </div>
 
+      <nav class="nav">
+        <a href="#about">عني</a>
+        <a href="#projects">المشاريع</a>
+        <a href="#services">الخدمات</a>
+        <a href="#skills">المهارات</a>
+      </nav>
+
       <a
-        class="header-btn"
         href="https://wa.me/201027557397"
-        target="_blank">
+        target="_blank"
+        class="top-btn">
         واتساب 💬
       </a>
 
@@ -515,30 +599,32 @@
       <div class="hero-content">
 
         <span class="badge">
-          🚀 مطور • مصمم • صانع أفكار
+          ✦ أهلاً بك في موقعي الشخصي
         </span>
 
         <h1>
           محمد <span>محمود</span>
         </h1>
 
+        <h2>
+          Developer • Designer • Digital Creator
+        </h2>
+
         <p>
-          أصنع مواقع وتجارب رقمية حديثة، وأحوّل الأفكار
-          إلى مشاريع جميلة وسهلة الاستخدام.
+          أُحوّل الأفكار إلى مواقع وتجارب رقمية حديثة،
+          وأهتم بالتفاصيل والتصميم وسهولة الاستخدام.
         </p>
 
-        <div class="hero-buttons">
+        <div class="buttons">
 
-          <a
-            href="#projects"
-            class="btn projects-btn">
+          <a href="#projects" class="btn cyan-btn">
             🚀 استكشف مشاريعي
           </a>
 
           <a
             href="https://wa.me/201027557397"
             target="_blank"
-            class="btn whatsapp">
+            class="btn green-btn">
             💬 تواصل معي على واتساب
           </a>
 
@@ -549,41 +635,81 @@
     </section>
 
 
+    <!-- STATS -->
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>15+</strong>
+        <span>فكرة ومشروع</span>
+      </div>
+
+      <div class="stat">
+        <strong>100%</strong>
+        <span>شغف بالتطوير</span>
+      </div>
+
+      <div class="stat">
+        <strong>24/7</strong>
+        <span>تعلم وتطوير</span>
+      </div>
+
+      <div class="stat">
+        <strong>∞</strong>
+        <span>أفكار جديدة</span>
+      </div>
+
+    </div>
+
+
     <!-- ABOUT -->
 
-    <section>
+    <section id="about">
 
       <div class="section-head">
 
-        <span class="small">
-          ABOUT ME
-        </span>
+        <small>ABOUT ME</small>
 
-        <h2>
-          نبذة عني
-        </h2>
+        <h2>من أنا؟</h2>
 
         <p>
-          شغوف بالتقنية والتصميم وبناء المشاريع الرقمية.
+          نبذة بسيطة عني وعن اهتمامي بالمجال الرقمي.
         </p>
 
       </div>
 
-      <div class="about-card">
+      <div class="about">
 
-        <div class="about-icon">
-          👨‍💻
+        <div class="about-card">
+
+          <h3>
+            👨‍💻 محمد محمود
+          </h3>
+
+          <p>
+            شغوف بالتقنية والتصميم وبناء المشاريع الرقمية.
+            أعمل على تطوير أفكار ومواقع وتطبيقات تهدف إلى
+            تقديم تجربة بسيطة وعصرية للمستخدم.
+          </p>
+
         </div>
 
-        <h3>
-          محمد محمود
-        </h3>
+        <div class="about-card">
 
-        <p>
-          أعمل على تطوير أفكار ومشاريع رقمية باستخدام تقنيات
-          الويب والذكاء الاصطناعي. أحب التصميم العصري،
-          البساطة، والأفكار التي يمكن أن تتحول إلى منتجات حقيقية.
-        </p>
+          <h3>
+            ⚡ ما الذي يميزني؟
+          </h3>
+
+          <ul class="about-list">
+
+            <li>🚀 أحب تحويل الأفكار إلى مشاريع</li>
+            <li>🎨 أهتم بالتصميم وتجربة المستخدم</li>
+            <li>📱 أصمم مع الاهتمام بالموبايل</li>
+            <li>🤖 مهتم بتقنيات الذكاء الاصطناعي</li>
+
+          </ul>
+
+        </div>
 
       </div>
 
@@ -596,236 +722,271 @@
 
       <div class="section-head">
 
-        <span class="small">
-          MY WORK
-        </span>
+        <small>SELECTED WORK</small>
 
-        <h2>
-          مشاريعي
-        </h2>
+        <h2>المشاريع</h2>
 
         <p>
-          مجموعة من المشاريع والنماذج الرقمية.
+          نماذج وأفكار رقمية أعرضها داخل معرض أعمالي.
         </p>
 
       </div>
 
 
-      <div class="projects-grid">
+      <div class="projects">
 
 
-        <!-- PROJECT 1 -->
+        <!-- 1 -->
 
-        <div class="project">
+        <article class="project">
 
-          <div class="project-image">
+          <div class="project-img">
 
             <img
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
-              alt="AI Project">
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=85"
+              alt="VIZORA AI">
 
-            <span class="project-tag">
-              AI
-            </span>
+            <span class="tag">AI</span>
 
           </div>
 
-          <div class="project-info">
+          <div class="project-body">
 
-            <h3>
-              VIZORA AI
-            </h3>
+            <h3>VIZORA AI</h3>
 
             <p>
-              نموذج لأداة تعتمد على الذكاء الاصطناعي
-              لإنشاء المحتوى والفيديو بطريقة سهلة وسريعة.
+              فكرة أداة لصناعة المحتوى والفيديو باستخدام
+              تقنيات الذكاء الاصطناعي.
             </p>
 
-            <span class="project-link">
-              مشروع شخصي →
-            </span>
+            <div class="project-status">
+              مشروع شخصي • قيد التطوير
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-        <!-- PROJECT 2 -->
+        <!-- 2 -->
 
-        <div class="project">
+        <article class="project">
 
-          <div class="project-image">
+          <div class="project-img">
 
             <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
-              alt="Communication App">
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+              alt="RIVO">
 
-            <span class="project-tag">
-              APP
-            </span>
+            <span class="tag">APP</span>
 
           </div>
 
-          <div class="project-info">
+          <div class="project-body">
 
-            <h3>
-              RIVO
-            </h3>
+            <h3>RIVO</h3>
 
             <p>
-              نموذج لفكرة تطبيق مراسلة حديث يركز
-              على سرعة التواصل وتجربة الاستخدام.
+              نموذج لفكرة تطبيق مراسلة حديث يركز على
+              سهولة التواصل وتجربة المستخدم.
             </p>
 
-            <span class="project-link">
-              فكرة وتجربة →
-            </span>
+            <div class="project-status">
+              فكرة تطبيق • UI Concept
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-        <!-- PROJECT 3 -->
+        <!-- 3 -->
 
-        <div class="project">
+        <article class="project">
 
-          <div class="project-image">
+          <div class="project-img">
 
             <img
-              src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=900&q=80"
-              alt="Islamic Website">
+              src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1000&q=85"
+              alt="Athar">
 
-            <span class="project-tag">
-              WEB
-            </span>
+            <span class="tag">WEB</span>
 
           </div>
 
-          <div class="project-info">
+          <div class="project-body">
 
-            <h3>
-              أَثَر
-            </h3>
+            <h3>أَثَر</h3>
 
             <p>
-              مشروع ويب إسلامي يهتم بالقرآن والأذكار
+              تجربة ويب إسلامية تهتم بالقرآن والأذكار
               والتدبر بطريقة بسيطة وعصرية.
             </p>
 
-            <span class="project-link">
-              مشروع ويب →
-            </span>
+            <div class="project-status">
+              مشروع ويب • Personal Project
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-        <!-- PROJECT 4 -->
+        <!-- 4 -->
 
-        <div class="project">
+        <article class="project">
 
-          <div class="project-image">
+          <div class="project-img">
 
             <img
-              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
-              alt="Business Website">
-
-            <span class="project-tag">
-              WEBSITE
-            </span>
-
-          </div>
-
-          <div class="project-info">
-
-            <h3>
-              Business Website
-            </h3>
-
-            <p>
-              نموذج تصميم لموقع شركة حديث مع واجهة
-              احترافية ومتجاوبة مع الهاتف.
-            </p>
-
-            <span class="project-link">
-              نموذج تجريبي →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PROJECT 5 -->
-
-        <div class="project">
-
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80"
-              alt="Mobile App">
-
-            <span class="project-tag">
-              MOBILE
-            </span>
-
-          </div>
-
-          <div class="project-info">
-
-            <h3>
-              Mobile App
-            </h3>
-
-            <p>
-              نموذج لواجهة تطبيق موبايل حديثة مع
-              تصميم بسيط وتجربة استخدام سهلة.
-            </p>
-
-            <span class="project-link">
-              UI Concept →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PROJECT 6 -->
-
-        <div class="project">
-
-          <div class="project-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
               alt="Dashboard">
 
-            <span class="project-tag">
-              DASHBOARD
-            </span>
+            <span class="tag">DASHBOARD</span>
 
           </div>
 
-          <div class="project-info">
+          <div class="project-body">
 
-            <h3>
-              Smart Dashboard
-            </h3>
+            <h3>Smart Dashboard</h3>
 
             <p>
               نموذج لوحة تحكم عصرية لإدارة البيانات
-              والمشاريع والخدمات الرقمية.
+              والمشاريع والخدمات.
             </p>
 
-            <span class="project-link">
-              UI Concept →
-            </span>
+            <div class="project-status">
+              نموذج تجريبي • UI Concept
+            </div>
 
           </div>
+
+        </article>
+
+
+        <!-- 5 -->
+
+        <article class="project">
+
+          <div class="project-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1000&q=85"
+              alt="Mobile App">
+
+            <span class="tag">MOBILE</span>
+
+          </div>
+
+          <div class="project-body">
+
+            <h3>Mobile App</h3>
+
+            <p>
+              تصميم واجهة تطبيق موبايل حديث مع
+              تجربة استخدام سهلة وسريعة.
+            </p>
+
+            <div class="project-status">
+              نموذج تجريبي • UI Design
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 6 -->
+
+        <article class="project">
+
+          <div class="project-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+              alt="Business Website">
+
+            <span class="tag">WEBSITE</span>
+
+          </div>
+
+          <div class="project-body">
+
+            <h3>Business Website</h3>
+
+            <p>
+              نموذج لموقع شركة حديث ومتجاوب مع
+              الهاتف والكمبيوتر.
+            </p>
+
+            <div class="project-status">
+              نموذج تجريبي • Web Design
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+      <div class="section-head">
+
+        <small>SERVICES</small>
+
+        <h2>ماذا أقدم؟</h2>
+
+        <p>
+          خدمات ومجالات أعمل على تطويرها.
+        </p>
+
+      </div>
+
+      <div class="services">
+
+        <div class="service">
+
+          <div class="service-icon">🌐</div>
+
+          <h3>تصميم المواقع</h3>
+
+          <p>
+            مواقع عصرية ومتجاوبة مع الهاتف
+            بتصميم واضح وسريع.
+          </p>
+
+        </div>
+
+        <div class="service">
+
+          <div class="service-icon">📱</div>
+
+          <h3>واجهات التطبيقات</h3>
+
+          <p>
+            تصميم واجهات تطبيقات حديثة
+            وتجربة استخدام بسيطة.
+          </p>
+
+        </div>
+
+        <div class="service">
+
+          <div class="service-icon">🤖</div>
+
+          <h3>مشاريع الذكاء الاصطناعي</h3>
+
+          <p>
+            تجربة أفكار ومشاريع تعتمد على
+            تقنيات الذكاء الاصطناعي.
+          </p>
 
         </div>
 
@@ -836,118 +997,31 @@
 
     <!-- SKILLS -->
 
-    <section>
+    <section id="skills">
 
       <div class="section-head">
 
-        <span class="small">
-          SKILLS
-        </span>
+        <small>SKILLS</small>
 
-        <h2>
-          التقنيات والمهارات
-        </h2>
+        <h2>مهاراتي</h2>
 
         <p>
-          الأدوات التي أستخدمها في بناء أفكاري ومشاريعي.
+          التقنيات والأدوات التي أتعلم وأعمل بها.
         </p>
 
       </div>
 
       <div class="skills">
 
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">GitHub</div>
-        <div class="skill">GitHub Pages</div>
-        <div class="skill">Cloudflare</div>
-        <div class="skill">AI</div>
-        <div class="skill">Web Design</div>
-        <div class="skill">UI/UX</div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-
-    <section>
-
-      <div class="section-head">
-
-        <span class="small">
-          WHAT I DO
-        </span>
-
-        <h2>
-          ماذا أقدم؟
-        </h2>
-
-        <p>
-          أساعد في تحويل الأفكار إلى واجهات ومشاريع رقمية.
-        </p>
-
-      </div>
-
-
-      <div class="services">
-
-
-        <div class="service">
-
-          <div class="service-icon">
-            🌐
-          </div>
-
-          <h3>
-            تصميم المواقع
-          </h3>
-
-          <p>
-            تصميم مواقع حديثة ومتجاوبة مع الهاتف
-            بشكل احترافي وسريع.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="service-icon">
-            📱
-          </div>
-
-          <h3>
-            أفكار التطبيقات
-          </h3>
-
-          <p>
-            تحويل فكرة التطبيق إلى واجهة وتجربة
-            استخدام واضحة وعصرية.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="service-icon">
-            🤖
-          </div>
-
-          <h3>
-            مشاريع AI
-          </h3>
-
-          <p>
-            تجربة وبناء أفكار تعتمد على تقنيات
-            الذكاء الاصطناعي.
-          </p>
-
-        </div>
-
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">GitHub Pages</span>
+        <span class="skill">Cloudflare</span>
+        <span class="skill">AI</span>
+        <span class="skill">UI/UX</span>
+        <span class="skill">Web Design</span>
 
       </div>
 
@@ -956,23 +1030,23 @@
 
     <!-- CONTACT -->
 
-    <section id="contact">
+    <section>
 
-      <div class="contact-box">
+      <div class="contact">
 
         <h2>
           عندك فكرة؟ 🚀
         </h2>
 
         <p>
-          لو عندك فكرة موقع أو تطبيق أو مشروع رقمي،
-          تقدر تتواصل معي مباشرة على واتساب.
+          لو عندك مشروع أو فكرة موقع أو تطبيق،
+          تقدر تتواصل معي مباشرة.
         </p>
 
         <a
           href="https://wa.me/201027557397"
           target="_blank"
-          class="whatsapp-big">
+          class="btn green-btn">
 
           💬 تواصل معي على واتساب
 
@@ -995,11 +1069,23 @@
     </p>
 
     <p>
-      Built with passion 🚀
+      Developer • Designer • Digital Creator
     </p>
 
   </footer>
 
+
+  <!-- FLOATING WHATSAPP -->
+
+  <a
+    href="https://wa.me/201027557397"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="WhatsApp">
+
+    💬
+
+  </a>
 
 </body>
   </html>
