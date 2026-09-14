@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>محمد محمود | مطور ومصمم</title>
+
+  <meta name="description" content="محمد محمود - مطور مواقع وتطبيقات ومصمم مشاريع رقمية.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Tahoma, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.09), transparent 30%),
+        #070a10;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #00e5ff;
+    }
+
+    .header-btn {
+      padding: 10px 18px;
+      border: 1px solid rgba(0,229,255,.3);
+      border-radius: 30px;
+      color: #00e5ff;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .header-btn:hover {
+      background: #00e5ff;
+      color: #061018;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: 30px;
+      background: rgba(0,229,255,.07);
+      border: 1px solid rgba(0,229,255,.25);
+      color: #00e5ff;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 10vw, 90px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #00e5ff;
+    }
+
+    .hero p {
+      color: #929baa;
+      font-size: 19px;
+      line-height: 1.9;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 25px;
+      border-radius: 13px;
+      font-weight: bold;
+      transition: .3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: #061009;
+    }
+
+    .projects-btn {
+      background: #00e5ff;
+      color: #061018;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      filter: brightness(1.08);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-head .small {
+      color: #00e5ff;
+      font-size: 14px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-head h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: #7f8999;
+      line-height: 1.8;
+    }
+
+    /* ABOUT */
+
+    .about-card {
+      background: linear-gradient(
+        145deg,
+        rgba(15,21,31,.95),
+        rgba(9,13,20,.95)
+      );
+      border: 1px solid #1b2634;
+      border-radius: 25px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 20px 70px rgba(0,0,0,.25);
+    }
+
+    .about-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      background: rgba(0,229,255,.08);
+      border: 1px solid rgba(0,229,255,.2);
+    }
+
+    .about-card h3 {
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .about-card p {
+      color: #929baa;
+      line-height: 2;
+      max-width: 750px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      background: #0c1119;
+      border: 1px solid #1a2532;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: .35s;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,229,255,.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+
+    .project-image {
+      height: 210px;
+      overflow: hidden;
+      position: relative;
+      background: #111722;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+
+    .project:hover img {
+      transform: scale(1.07);
+    }
+
+    .project-tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(0,0,0,.7);
+      backdrop-filter: blur(10px);
+      padding: 7px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #00e5ff;
+    }
+
+    .project-info {
+      padding: 24px;
+    }
+
+    .project-info h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      color: #828c9c;
+      line-height: 1.8;
+      font-size: 14px;
+      min-height: 75px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #00e5ff;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .skill {
+      padding: 14px 21px;
+      background: #0c1119;
+      border: 1px solid #1b2634;
+      border-radius: 12px;
+      color: #d8dee7;
+      transition: .3s;
+    }
+
+    .skill:hover {
+      border-color: #00e5ff;
+      color: #00e5ff;
+      transform: translateY(-4px);
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: #0c1119;
+      border: 1px solid #1a2532;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0,229,255,.4);
+    }
+
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+
+    .service h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .service p {
+      color: #7f8998;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      background:
+        radial-gradient(circle at center, rgba(0,229,255,.08), transparent 60%),
+        #0c1119;
+      border: 1px solid #1b2634;
+      border-radius: 28px;
+      padding: 65px 25px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #8c96a5;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+
+    .whatsapp-big {
+      display: inline-flex;
+      background: #25D366;
+      color: #061009;
+      padding: 17px 30px;
+      border-radius: 14px;
+      font-weight: 900;
+      font-size: 17px;
+      transition: .3s;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .whatsapp-big:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid #151d27;
+      padding: 35px 0;
+      text-align: center;
+      color: #626d7c;
+      line-height: 1.8;
+    }
+
+    footer strong {
+      color: #00e5ff;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .projects-grid,
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 92%;
+      }
+
+      header {
+        height: 70px;
+      }
+
+      .header-btn {
+        font-size: 12px;
+        padding: 9px 13px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .section-head h2 {
+        font-size: 30px;
+      }
+
+      .projects-grid,
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        padding: 30px 20px;
+      }
+
+      .contact-box {
+        padding: 50px 20px;
+      }
+
+      .contact-box h2 {
+        font-size: 30px;
+      }
+
+      .project-image {
+        height: 200px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+      <div class="logo">
+        MOHAMED<span>.</span>
+      </div>
+
+      <a
+        class="header-btn"
+        href="https://wa.me/201027557397"
+        target="_blank">
+        واتساب 💬
+      </a>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="badge">
+          🚀 مطور • مصمم • صانع أفكار
+        </span>
+
+        <h1>
+          محمد <span>محمود</span>
+        </h1>
+
+        <p>
+          أصنع مواقع وتجارب رقمية حديثة، وأحوّل الأفكار
+          إلى مشاريع جميلة وسهلة الاستخدام.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#projects"
+            class="btn projects-btn">
+            🚀 استكشف مشاريعي
+          </a>
+
+          <a
+            href="https://wa.me/201027557397"
+            target="_blank"
+            class="btn whatsapp">
+            💬 تواصل معي على واتساب
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section>
+
+      <div class="section-head">
+
+        <span class="small">
+          ABOUT ME
+        </span>
+
+        <h2>
+          نبذة عني
+        </h2>
+
+        <p>
+          شغوف بالتقنية والتصميم وبناء المشاريع الرقمية.
+        </p>
+
+      </div>
+
+      <div class="about-card">
+
+        <div class="about-icon">
+          👨‍💻
+        </div>
+
+        <h3>
+          محمد محمود
+        </h3>
+
+        <p>
+          أعمل على تطوير أفكار ومشاريع رقمية باستخدام تقنيات
+          الويب والذكاء الاصطناعي. أحب التصميم العصري،
+          البساطة، والأفكار التي يمكن أن تتحول إلى منتجات حقيقية.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+      <div class="section-head">
+
+        <span class="small">
+          MY WORK
+        </span>
+
+        <h2>
+          مشاريعي
+        </h2>
+
+        <p>
+          مجموعة من المشاريع والنماذج الرقمية.
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
+              alt="AI Project">
+
+            <span class="project-tag">
+              AI
+            </span>
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              VIZORA AI
+            </h3>
+
+            <p>
+              نموذج لأداة تعتمد على الذكاء الاصطناعي
+              لإنشاء المحتوى والفيديو بطريقة سهلة وسريعة.
+            </p>
+
+            <span class="project-link">
+              مشروع شخصي →
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+              alt="Communication App">
+
+            <span class="project-tag">
+              APP
+            </span>
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              RIVO
+            </h3>
+
+            <p>
+              نموذج لفكرة تطبيق مراسلة حديث يركز
+              على سرعة التواصل وتجربة الاستخدام.
+            </p>
+
+            <span class="project-link">
+              فكرة وتجربة →
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=900&q=80"
+              alt="Islamic Website">
+
+            <span class="project-tag">
+              WEB
+            </span>
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              أَثَر
+            </h3>
+
+            <p>
+              مشروع ويب إسلامي يهتم بالقرآن والأذكار
+              والتدبر بطريقة بسيطة وعصرية.
+            </p>
+
+            <span class="project-link">
+              مشروع ويب →
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="project">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+              alt="Business Website">
+
+            <span class="project-tag">
+              WEBSITE
+            </span>
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              Business Website
+            </h3>
+
+            <p>
+              نموذج تصميم لموقع شركة حديث مع واجهة
+              احترافية ومتجاوبة مع الهاتف.
+            </p>
+
+            <span class="project-link">
+              نموذج تجريبي →
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+
+        <div class="project">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80"
+              alt="Mobile App">
+
+            <span class="project-tag">
+              MOBILE
+            </span>
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              Mobile App
+            </h3>
+
+            <p>
+              نموذج لواجهة تطبيق موبايل حديثة مع
+              تصميم بسيط وتجربة استخدام سهلة.
+            </p>
+
+            <span class="project-link">
+              UI Concept →
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 6 -->
+
+        <div class="project">
+
+          <div class="project-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+              alt="Dashboard">
+
+            <span class="project-tag">
+              DASHBOARD
+            </span>
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              Smart Dashboard
+            </h3>
+
+            <p>
+              نموذج لوحة تحكم عصرية لإدارة البيانات
+              والمشاريع والخدمات الرقمية.
+            </p>
+
+            <span class="project-link">
+              UI Concept →
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section>
+
+      <div class="section-head">
+
+        <span class="small">
+          SKILLS
+        </span>
+
+        <h2>
+          التقنيات والمهارات
+        </h2>
+
+        <p>
+          الأدوات التي أستخدمها في بناء أفكاري ومشاريعي.
+        </p>
+
+      </div>
+
+      <div class="skills">
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">GitHub Pages</div>
+        <div class="skill">Cloudflare</div>
+        <div class="skill">AI</div>
+        <div class="skill">Web Design</div>
+        <div class="skill">UI/UX</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section>
+
+      <div class="section-head">
+
+        <span class="small">
+          WHAT I DO
+        </span>
+
+        <h2>
+          ماذا أقدم؟
+        </h2>
+
+        <p>
+          أساعد في تحويل الأفكار إلى واجهات ومشاريع رقمية.
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+
+        <div class="service">
+
+          <div class="service-icon">
+            🌐
+          </div>
+
+          <h3>
+            تصميم المواقع
+          </h3>
+
+          <p>
+            تصميم مواقع حديثة ومتجاوبة مع الهاتف
+            بشكل احترافي وسريع.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">
+            📱
+          </div>
+
+          <h3>
+            أفكار التطبيقات
+          </h3>
+
+          <p>
+            تحويل فكرة التطبيق إلى واجهة وتجربة
+            استخدام واضحة وعصرية.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">
+            🤖
+          </div>
+
+          <h3>
+            مشاريع AI
+          </h3>
+
+          <p>
+            تجربة وبناء أفكار تعتمد على تقنيات
+            الذكاء الاصطناعي.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="contact-box">
+
+        <h2>
+          عندك فكرة؟ 🚀
+        </h2>
+
+        <p>
+          لو عندك فكرة موقع أو تطبيق أو مشروع رقمي،
+          تقدر تتواصل معي مباشرة على واتساب.
+        </p>
+
+        <a
+          href="https://wa.me/201027557397"
+          target="_blank"
+          class="whatsapp-big">
+
+          💬 تواصل معي على واتساب
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 <strong>Mohamed Mahmoud</strong>
+    </p>
+
+    <p>
+      Built with passion 🚀
+    </p>
+
+  </footer>
+
+
+</body>
+  </html>
